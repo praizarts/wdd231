@@ -1,0 +1,211 @@
+
+:root {
+  --primary-color: #040F16; 
+  --accent-color: #f0f0f0;
+  --text-dark: #333;
+  --text-light: #fff;
+  --charcoal: #343633;
+  --tucson-sun: #F7C548;
+  --heading-font: 'Poppins', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+  --padding-std: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+/* --- Header & Logo --- */
+.site-header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: var(--padding-std);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo span {
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+.edu-icon {
+  width: 70px;
+  height: auto;
+}
+
+/* --- Navigation --- */
+#menu {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.main-nav {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.navigation {
+  list-style: none;
+  display: none; 
+  flex-direction: column;
+  padding: 0;
+}
+
+.navigation.show {
+  display: flex; 
+}
+
+.navigation li a {
+  display: block;
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.75rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navigation li a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+/* --- Main Content --- */
+main {
+  padding: var(--padding-std);
+  max-width: 100%;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-family: var(--heading-font);
+  background-color: var(--charcoal); 
+  color: var(--text-light);             
+  text-align: center;                    
+  padding: 0.75rem;                     
+  margin-top: 1.5rem;                    
+  margin-bottom: 1rem;                   
+  border-radius: 4px;                   
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 1.5rem;
+}
+
+.about p {
+  margin-bottom: 1rem;
+}
+
+.image-placeholder {
+  display: flex;
+  justify-content: center; 
+  padding: 1rem 0;
+}
+
+.photo img {
+  border: 5px solid var(--accent-color); 
+  border-radius: 8px;
+  height: auto; 
+  max-width: 200px; 
+}
+
+/* --- Courses Section --- */
+.courses {
+  margin-top: 2rem;
+  background-color: var(--accent-color);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.buttons button {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--primary-color);
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons button:hover, .buttons button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+#course-container {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Course cards */
+.course-card {
+  padding: 1rem;
+  background-color: white;
+  border-left: 5px solid var(--primary-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social img {
+  transition: transform 0.2s;
+}
+
+.social img:hover {
+  transform: scale(1.1);
+}
+
+footer p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
