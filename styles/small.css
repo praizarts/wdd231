@@ -88,7 +88,7 @@ body {
 }
 
 .navigation li a.active {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color:var(--tucson-sun);
   font-weight: bold;
 }
 
@@ -156,7 +156,7 @@ h2 {
 .buttons button {
   padding: 0.6rem 1.2rem;
   border: 1px solid var(--primary-color);
-  background-color: white;
+  background-color: var(--text-light);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -176,7 +176,7 @@ h2 {
 /* Course cards */
 .course-card {
   padding: 1rem;
-  background-color: white;
+  background-color: var(--primary-color);
   border-left: 5px solid var(--primary-color);
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
