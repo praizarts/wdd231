@@ -54,13 +54,13 @@
     gap: var(--padding-large);
   }
 
-  #members.list {
+  .list {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
 
-    #members.list .card {
+    .list .card {
     display: flex;
     align-items: center;
     text-align: left;
@@ -68,7 +68,7 @@
     padding: var(--padding-large);
   }
 
-  #members.list .card-content {
+  .list .card-content {
     flex: 1;
   }
    
@@ -79,9 +79,7 @@
     margin: 1rem 0;
 }
 
-.list .card img {
-  display: none;
-}
+
 
 /* BUTTONS */
 button {
