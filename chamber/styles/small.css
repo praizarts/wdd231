@@ -169,9 +169,6 @@ button:hover {
     padding: var(--padding-medium);
     text-align: center;
     line-height: 1.5;
-}
-
-.card {
     background: var(--card-surface);
     border-radius: var(--radius);
     box-shadow: var(--card-shadow);
