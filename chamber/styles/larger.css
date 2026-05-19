@@ -49,7 +49,7 @@
     font-size: 2rem;
      }
 
-       #members.grid {
+    #members.grid {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--padding-large);
   }
@@ -66,12 +66,6 @@
     text-align: left;
     gap: 2rem;
     padding: var(--padding-large);
-  }
-
-    #members.list .card img {
-    width: 200px; 
-    height: auto;
-    object-fit: cover;
   }
 
   #members.list .card-content {
@@ -99,11 +93,6 @@ button {
     cursor: pointer;
 }
   
-
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
 .footer-container {
     flex-direction: row;
     justify-content: space-between;
