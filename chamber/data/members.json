@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Lekki Tech Hub",
+    "address": "12 Admiralty Way, Lekki Phase 1, Lagos",
+    "phone": "(+234) 801-111-2222",
+    "website": "https://example.com/lekkitech",
+    "image": "images/lekki.png",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Ikeja Mall Stores",
+    "address": "45 Obafemi Awolowo Way, Ikeja, Lagos",
+    "phone": "(+234) 802-333-4444",
+    "website": "https://example.com/ikejamall",
+    "image": "images/ikeja.png",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Victoria Island Finance",
+    "address": "22 Ahmadu Bello Way, Victoria Island, Lagos",
+    "phone": "(+234) 803-555-6666",
+    "website": "https://example.com/vifinance",
+    "image": "images/victoria.png",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Surulere Fashion House",
+    "address": "18 Adeniran Ogunsanya Street, Surulere, Lagos",
+    "phone": "(+234) 804-777-8888",
+    "website": "https://example.com/surulerefashion",
+    "image": "images/surulere.png",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Apapa Logistics Ltd",
+    "address": "7 Creek Road, Apapa, Lagos",
+    "phone": "(+234) 805-999-0000",
+    "website": "https://example.com/apapalogistics",
+    "image": "images/apapa.png",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Yaba Startup Space",
+    "address": "30 Herbert Macaulay Way, Yaba, Lagos",
+    "phone": "(+234) 806-121-2121",
+    "website": "https://example.com/yabastartup",
+    "image": "images/yaba.png",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Eko Hotels & Suites",
+    "address": "1415 Adetokunbo Ademola Street, Victoria Island, Lagos",
+    "phone": "(+234) 807-343-4343",
+    "website": "https://example.com/ekohotels",
+    "image": "images/eko.png",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Balogun Market Traders",
+    "address": "5 Broad Street, Lagos Island, Lagos",
+    "phone": "(+234) 808-565-5656",
+    "website": "https://example.com/balogunmarket",
+    "image": "images/balogun.png",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Festac Retail Plaza",
+    "address": "23 21 Road, Festac Town, Lagos",
+    "phone": "(+234) 809-787-7878",
+    "website": "https://example.com/festacretail",
+    "image": "images/festac.png",
+    "membershipLevel": 2
+  }
+]
