@@ -286,28 +286,8 @@ footer {
 }
 
 /* --- Cards Design Structure --- */
-.card {
-    padding: var(--padding-medium);
-    text-align: center;
-    line-height: 1.5;
-    background-color: var(--card-surface);
-    border-radius: var(--radius);
-    box-shadow: var(--card-shadow);
-    margin-bottom: 1.5rem;
-    overflow: hidden;
-}
-
 .card-content {
     padding: 1rem;
-}
-
-.card h2 {
-    background-color: var(--primary-color);
-    color: var(--white);
-    margin: 0;
-    padding: 0.75rem;
-    font-size: 1.25rem;
-    font-family: var(--nav-font);
 }
 
 /* Weather inner layout */
@@ -341,7 +321,6 @@ footer {
 .spotlight-card {
     background-color: var(--card-surface);
     box-shadow: var(--card-shadow);
-    border-radius: var(--radius);
     padding: 1rem;
     border-radius: var(--radius);
     text-align: center;
