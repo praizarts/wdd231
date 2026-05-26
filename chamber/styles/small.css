@@ -2,11 +2,11 @@
   --primary-color: #040F16;
   --secondary-color: #ee9b00;
   --background-color: #f8f9fa;
+  --card-surface: #dcdcdc;
   --text-color: #222222;
   --white: #ffffff;
   --border-radius: 12px;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-
+  --card-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   --heading-font: "Acme", sans-serif;
   --body-font: "Open Sans", sans-serif;
   --nav-font: "Play", sans-serif;
@@ -217,3 +217,138 @@ footer {
 .social-links a:hover {
     color: var(--accent-color);
 }
+
+/* --- Main Content Base Layout --- */
+.home-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.home-grid h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* --- Hero Element --- */
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    min-height: 250px;
+    background-color: var(--placeholder-color); 
+}
+
+.hero-cta {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- Cards Design Structure --- */
+.card {
+    background-color: var(--card-surface);
+    margin-bottom: 1.5rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.card h3 {
+    background-color: var(--primary-color);
+    color: var(--white);
+    margin: 0;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+/* Weather inner layout */
+.weather-layout img {
+    float: left;
+    width: 64px;
+    height: 64px;
+}
+
+.weather-layout ul {
+    list-style: none;
+    padding-left: 80px;
+    margin: 0;
+}
+
+.forecast-day {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-neutral);
+}
+.forecast-day:last-child {
+    border-bottom: none;
+}
+
+/* --- Business Spotlight Layout --- */
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.spotlight-card {
+    background-color: var(--card-surface);
+    box-shadow: var(--card-shadow);
+    border-radius: var(--radius);
+    padding: 1rem;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.spotlight-card h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+}
+
+.spotlight-card .tagline {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.spotlight-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    gap: 1rem;
+}
+
+.spotlight-logo {
+    max-width: 80px;
+    height: auto;
+    background: var(--placeholder-color);
+}
+
