@@ -286,8 +286,28 @@ footer {
 }
 
 /* --- Cards Design Structure --- */
+.weather-card {
+    padding: var(--padding-medium);
+    text-align: center;
+    line-height: 1.5;
+    background-color: var(--card-surface);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
 .card-content {
     padding: 1rem;
+}
+
+.weather-card h2 {
+    background-color: var(--primary-color);
+    color: var(--white);
+    margin: 0;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+    font-family: var(--nav-font);
 }
 
 /* Weather inner layout */

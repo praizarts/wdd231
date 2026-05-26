@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ==========================================
-// 1. WEATHER API SERVICE FETCH (CELSIUS)
+// WEATHER API SERVICE FETCH (CELSIUS)
 // ==========================================
 async function fetchWeatherData() {
     const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
@@ -73,7 +73,7 @@ function renderForecast(data) {
 }
 
 // ==========================================
-// 2. RANDOM SPOTLIGHT MEMBERS AD FETCH
+// RANDOM SPOTLIGHT MEMBERS AD FETCH
 // ==========================================
 async function fetchSpotlights() {
     try {
@@ -119,3 +119,15 @@ function renderSpotlights(selectedMembers) {
         container.appendChild(card);
     });
 }
+
+// JavaScript for Hamburger
+const hamburger = document.querySelector("#hamburger");
+const nav = document.querySelector("#navigation"); 
+hamburger.addEventListener("click", () => {
+    nav.classList.toggle("open");
+    hamburger.textContent = nav.classList.contains("open") ? "✖" : "☰";
+});
+
+// Footer Get Current Year and Last Modified Date
+document.getElementById("current-year").textContent = new Date().getFullYear();
+document.getElementById("last-modified").textContent = document.lastModified;
