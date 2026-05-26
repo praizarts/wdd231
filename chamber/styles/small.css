@@ -6,10 +6,12 @@
   --text-color: #222222;
   --white: #ffffff;
   --border-radius: 12px;
-  --card-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  --heading-font: "Acme", sans-serif;
+   --heading-font: "Acme", sans-serif;
   --body-font: "Open Sans", sans-serif;
   --nav-font: "Play", sans-serif;
+  --border-neutral: #cccccc;
+  --text-muted: #666666;
+   --placeholder-color: #e0e0e0;
 
     /* Spacing */
     --padding-small: 0.5rem;
@@ -26,14 +28,13 @@
 
 
 * {
-        margin: 0;
-        padding: 0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 /* RESET FEEL */
 body {
-  margin: 0;
   font-family: var(--body-font);
   background: var(--background-color);
   color: var(--text-color);
@@ -279,18 +280,14 @@ footer {
 
 /* --- Cards Design Structure --- */
 .card {
+    padding: var(--padding-medium);
+    text-align: center;
+    line-height: 1.5;
     background-color: var(--card-surface);
-    margin-bottom: 1.5rem;
     border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1.5rem;
     overflow: hidden;
-}
-
-.card h3 {
-    background-color: var(--primary-color);
-    color: var(--white);
-    margin: 0;
-    padding: 0.75rem;
-    font-size: 1.1rem;
 }
 
 .card-content {
