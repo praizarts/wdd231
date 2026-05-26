@@ -117,6 +117,20 @@ button {
 
 /* --- Responsive Desktop Views Queries --- */
 @media (min-width: 768px) {
+
+      .home-grid {
+        padding: 0;
+    }
+
+    .hero {
+        margin: 0;
+    }
+
+    .hero-img {
+        width: 100%;
+        display: block;
+        margin:0;
+    }
     .cta-btn {
     display: inline-block;
     width: 200px;
