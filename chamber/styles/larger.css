@@ -115,19 +115,42 @@ button {
 
 }
 
-/* --- Desktop Layout Media Queries --- */
+/* --- Responsive Desktop Views Queries --- */
 @media (min-width: 768px) {
-      .info-grid {
+    .cta-btn {
+    display: inline-block;
+    margin-right: 120px;
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+}
+
+
+    .info-grid {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
+        gap: var(--padding-medium);
     }
     
-    .card {
-        margin-bottom: 0;
-    }
-    .spotlight-grid {
+       .spotlight-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
+
+    .spotlight-card h2 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+    font-family: var(--nav-font);
+    font-weight: bold;
+}
+
+.spotlight-logo {
+    max-width: 90px;
+    height: auto;
+    background: var(--placeholder-color);
+    margin-top: 0.5rem;
+}
 }
