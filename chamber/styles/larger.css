@@ -118,10 +118,6 @@ button {
 /* --- Responsive Desktop Views Queries --- */
 @media (min-width: 768px) {
 
-      .home-grid {
-        padding: 0;
-    }
-
     .hero {
         margin: 0;
     }
