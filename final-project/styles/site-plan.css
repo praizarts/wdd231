@@ -1,0 +1,231 @@
+/* ==========================================================================
+   DESIGN SYSTEM VARIABLE TOKENS (Movie Theme Palette)
+   ========================================================================== */
+:root {
+    --primary-color: #04151F;       
+    --accent-amber: #F5BB00;      
+    --surface-card: #1E293B;     
+    --text-light: #F8FAFC;       
+    --text-muted: #94A3B8;       
+    --border-dim: #334155;
+    --graphite: #2E2F2F;
+    --nav-bg: #242424;       
+    --font-heading: 'Play', system-ui, -apple-system, sans-serif;
+    --font-body: 'Roboto', system-ui, -apple-system, sans-serif;
+}
+
+/* ==========================================================================
+   BASE CORE RESET
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-light);
+    background-color: var(--graphite);
+    padding: 0;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; }
+h2 { font-size: 1.6rem; margin-top: 1rem; color: var(--accent-amber); }
+h3 { font-size: 1.2rem; color: var(--text-light); }
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-dim);
+    margin: 2.5rem 0;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   STRUCTURAL LAYOUT
+   ========================================================================== */
+header {
+    background-color: var(--primary-color); 
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 2px solid var(--accent-rose);
+}
+
+.author-credit {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+nav {
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-dim);
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.9rem 1.4rem;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--text-light);
+    background-color: var(--surface-card);
+}
+
+main {
+    max-width: 1040px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   CONTENT WRAPPERS
+   ========================================================================== */
+.section-intro {
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+.card {
+    background: var(--surface-card);
+    border: 1px solid var(--border-dim);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+
+ul {
+    list-style-position: inside;
+    margin-left: 0.25rem;
+}
+
+ul li {
+    background: var(--surface-card);
+    border-left: 4px solid var(--accent-rose);
+    padding: 1.25rem;
+    margin-bottom: 0.85rem;
+    list-style-type: none;
+    border-radius: 0 6px 6px 0;
+}
+
+/* Color Scheme Visual Swatches */
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.color-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    border-radius: 6px;
+    font-family: var(--font-heading);
+    font-weight: bold;
+    border: 1px solid var(--border-dim);
+}
+
+.color-primary { background-color: var(--primary-color); color: var(--text-light); }
+.color-secondary { background-color: var(--accent-amber); color: var(--nav-bg); }
+.color-dark { background-color: var(--text-muted); color: var(--primary-color); }
+.color-light { background-color: var(--surface-card); color: var(--text-light); }
+
+.color-box span:last-child {
+    font-size: 0.8rem;
+    font-weight: normal;
+    margin-top: 0.25rem;
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   WIREFRAME EMBED FLEX CONTAINERS
+   ========================================================================== */
+.wireframe-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.wireframe-display-block {
+    background: var(--primary-color);
+    border: 1px solid var(--border-dim);
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.wireframe-display-block h4 {
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    border-bottom: 1px dashed var(--border-dim);
+    padding-bottom: 0.5rem;
+}
+
+.wireframe-display-block img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* ==========================================================================
+   GLOBAL DOCUMENT FOOTER
+   ========================================================================== */
+footer {
+    background-color: #020617;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.85rem;
+    margin-top: 5rem;
+    border-top: 1px solid var(--border-dim);
+}
+
+/* ==========================================================================
+   FLUID MEDIA QUERIES
+   ========================================================================== */
+@media (min-width: 768px) {
+    .wireframe-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .wireframe-display-block:first-child {
+        flex: 1; /* Retain compact scaling on mobile blueprint column */
+    }
+    .wireframe-display-block:last-child {
+        flex: 2; /* Allocate broader landscape canvas to desktop layout view */
+    }
+}

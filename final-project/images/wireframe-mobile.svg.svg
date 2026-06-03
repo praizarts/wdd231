@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 620" width="100%" height="100%">
+  <defs>
+    <style>
+      .canvas-bg { fill: #0F172A; stroke: #334155; stroke-width: 2; stroke-dasharray: 4 4; }
+      .block-header { fill: #020617; stroke: #E11D48; stroke-width: 1; }
+      .block-nav { fill: #1E293B; }
+      .block-hero { fill: #1E293B; stroke: #334155; stroke-width: 1; }
+      .block-main { fill: #020617; stroke: #334155; stroke-width: 1; }
+      .card-item { fill: #1E293B; stroke: #334155; stroke-width: 1.5; }
+      .btn-accent { fill: #E11D48; rx: 4px; }
+      
+      /* Typography Classes */
+      .font-title { font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: bold; fill: #F8FAFC; }
+      .font-header-text { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; font-weight: 800; fill: #F8FAFC; letter-spacing: 0.5px; }
+      .font-nav-text { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; fill: #94A3B8; }
+      .font-bold-label { font-family: system-ui, -apple-system, sans-serif; font-size: 12px; font-weight: 700; fill: #E11D48; }
+      .font-body-text { font-family: system-ui, -apple-system, sans-serif; font-size: 11px; fill: #94A3B8; }
+      .font-btn-text { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; font-weight: bold; fill: #FFFFFF; }
+      .font-footer-text { font-family: system-ui, -apple-system, sans-serif; font-size: 10px; fill: #64748B; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="320" height="620" class="canvas-bg" />
+
+  <text x="160" y="25" class="font-title" text-anchor="middle">Mobile Blueprint (320px Viewport)</text>
+
+  <rect x="15" y="45" width="290" height="50" class="block-header" rx="4" />
+  <text x="35" y="74" class="font-header-text" text-anchor="start">🍿 MovieScoop</text>
+
+  <rect x="15" y="105" width="290" height="35" class="block-nav" rx="2" />
+  <text x="30" y="127" class="font-nav-text" text-anchor="start">☰ Toggle Genres / Watchlist Menu</text>
+
+  <rect x="15" y="150" width="290" height="90" class="block-hero" rx="4" />
+  <text x="160" y="190" class="font-title" text-anchor="middle" font-size="12">Ditch Choice Paralysis.</text>
+  <text x="160" y="210" class="font-body-text" text-anchor="middle">Curated Media Recommendations</text>
+
+  <rect x="15" y="250" width="290" height="295" class="block-main" rx="4" />
+  <text x="30" y="272" class="font-title" font-size="11" text-anchor="start">Trending Suggestions (1-Up Row)</text>
+
+  <rect x="25" y="285" width="270" height="150" class="card-item" rx="6" />
+  
+  <g transform="translate(40, 0)">
+    <text x="0" y="310" class="font-bold-label">1. Interstellar (Title)</text>
+    <text x="0" y="330" class="font-body-text">Genre: Sci-Fi / Adventure</text>
+    <text x="0" y="348" class="font-body-text">Category: Movie  |  Year: 2014</text>
+    <text x="0" y="366" class="font-body-text">Rating: ⭐ 8.6/10 (4 Properties)</text>
+  </g>
+
+  <rect x="40" y="390" width="125" height="28" class="btn-accent" />
+  <text x="102" y="407" class="font-btn-text" text-anchor="middle">More Details (Modal)</text>
+
+  <rect x="25" y="450" width="270" height="80" class="card-item" stroke-dasharray="3 3" rx="4" />
+  <text x="160" y="480" class="font-title" font-size="11" text-anchor="middle">Interactive Watchlist Panel Form</text>
+  <text x="160" y="500" class="font-body-text" text-anchor="middle">(Saves entries to local storage state)</text>
+
+  <rect x="15" y="555" width="290" height="50" fill="#020617" rx="4" />
+  <text x="160" y="575" class="font-footer-text" text-anchor="middle">I.P. Mbachu | Lagos, Nigeria</text>
+  <text x="160" y="591" class="font-footer-text" text-anchor="middle" font-size="8">Resource Attributions Document</text>
+</svg>
