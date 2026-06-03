@@ -130,4 +130,4 @@ hamburger.addEventListener("click", () => {
 
 // Footer Get Current Year and Last Modified Date
 document.getElementById("current-year").textContent = new Date().getFullYear();
-document.getElementById("last-modified").textContent = document.lastModified;
+document.getElementById("lastModified").textContent = document.lastModified;

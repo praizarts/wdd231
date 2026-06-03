@@ -376,9 +376,7 @@ footer {
     background: var(--placeholder-color);
 }
 
-/* ==========================================================================
-   Join Form Layout
-   ========================================================================== */
+/* Join Form Layout */
 .join-main {
   display: grid;
   grid-template-columns: 1fr;
