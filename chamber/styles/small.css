@@ -75,13 +75,15 @@ header {
 
 .site-title {
     font-family: var(--heading-font);
-    font-size: 1.15rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 /* Hamburger Menu */
 #hamburger {
-    font-size: 1.5rem;
+    font-size: 1.95rem;
+    background: none;
+    border: none;
 }
 
 /* NAV */
@@ -110,10 +112,11 @@ header {
 #navigation ul li a {
     display: block;
     padding: var(--padding-medium);
+    font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
     color: inherit;
-    font-weight: 700;
+    font-weight: 400;
     font-family: var(--nav-font);
 }
 
@@ -373,3 +376,323 @@ footer {
     background: var(--placeholder-color);
 }
 
+/* ==========================================================================
+   Join Form Layout
+   ========================================================================== */
+.join-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: var(--padding-large);
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--white);
+}
+
+/* Form Styling */
+.form-section form label {
+  display: block;
+  margin-bottom: 15px;
+  font-family: var(--nav-font);
+  color: var(--text-muted);
+}
+
+.form-section h2, 
+.levels-section h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* Target all inputs except the submit button */
+.form-section input:not([type="submit"]),
+.form-section select,
+.form-section textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 20px 0;
+  border: 1px solid var(--border-neutral); 
+  border-left: 8px solid var(--placeholder-color); 
+  border-radius: var(--radius);
+  box-sizing: border-box; 
+  transition: border-color 0.3s ease;
+  font-family: var(--body-font);
+}
+
+/* Invalid State - Red */
+.form-section input:not([type="submit"]):not(:placeholder-shown):invalid,
+.form-section select:not(:placeholder-shown):invalid {
+  border-left-color: var(--error-red);
+}
+
+/* Valid State - Green */
+.form-section input:not([type="submit"]):valid,
+.form-section select:valid,
+.form-section textarea:valid {
+  border-left-color: var(--success-green);
+}
+
+.submit-btn {
+  border: none;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 15px 25px;
+  cursor: pointer;
+  font-family: var(--nav-font);
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Membership Cards */
+.membership-card {
+  background-color: var(--card-surface);
+  border: 1px solid var(--border-neutral);
+  border-radius: var(--border-radius); 
+  padding: 25px;
+  margin-bottom: 15px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  opacity: 0; 
+  transform: scale(0.9);
+  animation: cardEntry 0.6s ease forwards;
+}
+
+.membership-card p {
+  color: var(--text-color);
+  font-family: var(--heading-font);
+  font-weight: bold;
+}
+
+@keyframes cardEntry {
+  to { opacity: 1; transform: scale(1); }
+}
+
+.membership-card:nth-child(2) { animation-delay: 0.2s; }
+.membership-card:nth-child(3) { animation-delay: 0.6s; }
+.membership-card:nth-child(4) { animation-delay: 0.8s; }
+.membership-card:nth-child(5) { animation-delay: 1.0s; }
+
+/* Learn More buttons */
+.open-modal {
+  background-color: var(--white); 
+  color: var(--text-color);               
+  border: 1px solid var(--border-neutral);    
+  padding: 8px 20px;          
+  font-family: var(--heading-font);        
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: var(--radius);       
+  transition: all 0.2s ease-in-out;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2); 
+  margin-top: 10px;
+}
+
+.open-modal:active {
+  transform: translateY(1px); 
+  box-shadow: none;
+}
+
+/* 
+   Modal Modifiers */
+dialog {
+  position: fixed;
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--padding-large);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0; 
+  line-height: 1.2;
+  font-family: var(--body-font);
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(5px); 
+  backdrop-filter: blur(5px); 
+}
+
+.close-modal {
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  padding: 15px 25px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+/* Thank You Page & Summaries  */
+.thankyou-content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: var(--padding-large);
+  text-align: center;
+  font-family: var(--heading-font);
+}
+
+.thankyou-content h1 {
+  color: var(--success-green);
+  margin-bottom: 10px;
+}
+
+#submission-summary {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-neutral);
+  border-radius: var(--radius);
+  padding: 25px;
+  margin-top: 30px;
+  text-align: left; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-family: var(--body-font);
+}
+
+#submission-summary h2 {
+  border-bottom: 2px solid var(--success-green);
+  padding-bottom: 10px;
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  font-family: var(--heading-font);
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-neutral); 
+}
+
+.info-item:nth-child(even) {
+  background-color: var(--placeholder-color);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.info-item strong {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.info-item span {
+  color: var(--text-color);
+  word-break: break-all; 
+}
+
+.thankyou-footer {
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+.back-home {
+  display: inline-block;
+  background-color: var(--primary-color); 
+  color: var(--white);
+  text-decoration: none; 
+  padding: 12px 30px;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-top: 30px;
+}
+
+/* Visitor Message Styling */
+.visitor-banner {
+  background-color: var(--placeholder-color);
+  padding: var(--padding-medium);
+  text-align: center;
+  margin-bottom: var(--padding-medium);
+  border: 1px solid var(--border-neutral);
+  font-weight: bold;
+  font-family: var(--body-font);
+}
+
+/* Discover Cards & Grid */
+.discover-card {
+  border: 1px solid var(--border-neutral);
+  padding: 10px;
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius);
+}
+
+.discover-card figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.discover-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.discover-card img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.discover-card h2 {
+  margin-top: 0.5rem;
+  font-family: var(--heading-font);
+}
+
+.discover-card address {
+  font-style: normal;
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-family: var(--body-font);
+}
+
+.discover-card button {
+  margin-top: auto; /* Pushes button to bottom if cards are different heights */
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  font-family: var(--nav-font);
+  border-radius: var(--radius);
+  transition: background-color 0.2s;
+}
+
+.discover-card button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Mobile Layout Layout Area */
+.discover-grid {
+  display: grid;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+  gap: 20px;
+  padding: 20px;
+}
