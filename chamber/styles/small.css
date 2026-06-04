@@ -120,6 +120,12 @@ header {
     font-family: var(--nav-font);
 }
 
+  #navigation a:hover,
+    #navigation a.active {
+        background: var(--secondary-color);
+        color: var(--text-color);
+        padding: 0.7rem 0.9rem;
+    }
 
 /* MAIN */
 main {
