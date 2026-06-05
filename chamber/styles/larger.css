@@ -225,6 +225,12 @@ button {
     justify-self: start; /* Keeps button from stretching */
     margin-top: 10px;
 }
+.discover-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: var(--heading-font);
+}
 }
 
 .card-1 { grid-area: card1; }
@@ -236,9 +242,3 @@ button {
 .card-7 { grid-area: card7; }
 .card-8 { grid-area: card8; }
 
-.discover-title {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    font-family: var(--heading-font);
-}
