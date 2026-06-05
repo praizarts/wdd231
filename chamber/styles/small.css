@@ -670,7 +670,7 @@ dialog::backdrop {
 }
 
 .discover-card button {
-  margin-top: auto; /* Pushes button to bottom if cards are different heights */
+  margin-top: auto; 
   padding: 10px;
   cursor: pointer;
   background-color: var(--primary-color);
@@ -699,4 +699,11 @@ dialog::backdrop {
     "card8";
   gap: 20px;
   padding: 20px;
+}
+
+.discover-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: var(--heading-font);
 }

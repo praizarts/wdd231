@@ -235,3 +235,10 @@ button {
 .card-6 { grid-area: card6; }
 .card-7 { grid-area: card7; }
 .card-8 { grid-area: card8; }
+
+.discover-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: var(--heading-font);
+}
