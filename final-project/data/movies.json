@@ -1,0 +1,169 @@
+
+[
+  {
+    "id": 1,
+    "title": "Dune: Part Two",
+    "category": "Movie",
+    "genre": "Sci-Fi",
+    "year": 2024,
+    "rating": 8.7,
+    "image": "images/dune2.webp",
+    "description": "Paul Atreides unites with the Fremen to wage war against those who destroyed his family.",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Oppenheimer",
+    "category": "Movie",
+    "genre": "Biography",
+    "year": 2023,
+    "rating": 8.4,
+    "image": "images/oppenheimer.webp",
+    "description": "The story of physicist J. Robert Oppenheimer and the creation of the atomic bomb.",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "The Batman",
+    "category": "Movie",
+    "genre": "Action",
+    "year": 2022,
+    "rating": 7.8,
+    "image": "images/thebatman.webp",
+    "description": "Batman investigates corruption in Gotham while pursuing a mysterious serial killer.",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "Top Gun: Maverick",
+    "category": "Movie",
+    "genre": "Action",
+    "year": 2022,
+    "rating": 8.2,
+    "image": "images/topgun.webp",
+    "description": "Maverick returns to train a new generation of elite Navy pilots.",
+    "featured": true
+  },
+  {
+    "id": 5,
+    "title": "Avatar: The Way of Water",
+    "category": "Movie",
+    "genre": "Fantasy",
+    "year": 2022,
+    "rating": 7.6,
+    "image": "images/avatar2.webp",
+    "description": "Jake Sully and his family face new threats on Pandora.",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "Everything Everywhere All at Once",
+    "category": "Movie",
+    "genre": "Sci-Fi",
+    "year": 2022,
+    "rating": 7.8,
+    "image": "images/everything.webp",
+    "description": "A woman discovers she must connect with alternate versions of herself to save reality.",
+    "featured": false
+  },
+  {
+    "id": 7,
+    "title": "Spider-Man: Across the Spider-Verse",
+    "category": "Movie",
+    "genre": "Animation",
+    "year": 2023,
+    "rating": 8.6,
+    "image": "images/spiderverse.webp",
+    "description": "Miles Morales journeys across the multiverse and meets new Spider heroes.",
+    "featured": false
+  },
+  {
+    "id": 8,
+    "title": "John Wick: Chapter 4",
+    "category": "Movie",
+    "genre": "Action",
+    "year": 2023,
+    "rating": 7.7,
+    "image": "images/johnwick4.webp",
+    "description": "John Wick battles powerful enemies in his quest for freedom.",
+    "featured": false
+  },
+  {
+    "id": 9,
+    "title": "Fallout",
+    "category": "TV Show",
+    "genre": "Sci-Fi",
+    "year": 2024,
+    "rating": 8.4,
+    "image": "images/fallout.webp",
+    "description": "Survivors emerge from underground vaults into a post-apocalyptic wasteland.",
+    "featured": true
+  },
+  {
+    "id": 10,
+    "title": "The Last of Us",
+    "category": "TV Show",
+    "genre": "Drama",
+    "year": 2023,
+    "rating": 8.7,
+    "image": "images/lastofus.webp",
+    "description": "A hardened survivor escorts a young girl across a dangerous post-pandemic America.",
+    "featured": true
+  },
+  {
+    "id": 11,
+    "title": "Severance",
+    "category": "TV Show",
+    "genre": "Thriller",
+    "year": 2022,
+    "rating": 8.7,
+    "image": "images/severance.webp",
+    "description": "Employees undergo a procedure that separates work memories from personal life.",
+    "featured": false
+  },
+  {
+    "id": 12,
+    "title": "House of the Dragon",
+    "category": "TV Show",
+    "genre": "Fantasy",
+    "year": 2022,
+    "rating": 8.4,
+    "image": "images/hotd.webp",
+    "description": "The Targaryen dynasty faces a brutal civil war generations before Game of Thrones.",
+    "featured": false
+  },
+  {
+    "id": 13,
+    "title": "The Bear",
+    "category": "TV Show",
+    "genre": "Drama",
+    "year": 2022,
+    "rating": 8.5,
+    "image": "images/thebear.webp",
+    "description": "A talented chef returns home to run his family's struggling restaurant.",
+    "featured": false
+  },
+  {
+    "id": 14,
+    "title": "Andor",
+    "category": "TV Show",
+    "genre": "Sci-Fi",
+    "year": 2022,
+    "rating": 8.4,
+    "image": "images/andor.webp",
+    "description": "Cassian Andor becomes involved in the growing rebellion against the Empire.",
+    "featured": false
+  },
+  {
+    "id": 15,
+    "title": "Shōgun",
+    "category": "TV Show",
+    "genre": "Historical",
+    "year": 2024,
+    "rating": 8.8,
+    "image": "images/shogun.webp",
+    "description": "Political intrigue and warfare unfold in feudal Japan after a foreign sailor arrives.",
+    "featured": true
+  }
+]
+

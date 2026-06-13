@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="MovieScoop helps you discover highly-rated movies and TV shows with personalized recommendations, filtering tools, and a saved watchlist.">
+    <meta name="author" content="Ignatia Praise Mbachu">
+    <title>MovieScoop | Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Facebook / Open Graph Meta Tags -->
+    <meta property="og:title" content="MovieScoop | Homepage">
+        <meta property="og:description"
+        content="Discover highly-rated movies and TV shows with personalized recommendations, filtering tools, and a saved watchlist.">
+        <meta property="og:image"
+        content="https://praizarts.github.io/wdd231/final-project/images/logo.png">
+        <meta property="og:url"
+        content="https://praizarts.github.io/wdd231/final-project/index.html">
+        <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+<!-- HEADER -->
+   <header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="MovieScoop Logo">
+            <span>MovieScoop</span>
+        </a>
+
+        <button type="button" id="menu-btn" class="menu-btn" aria-label="Toggle Navigation">
+            ☰
+        </button>
+
+        <nav id="primary-nav">
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="recommendations.html">Recommendations</a></li>
+                <li><a href="watchlist.html">Watchlist</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+<!-- HERO -->
+<section class="hero">
+        <div class="hero-content">
+            <h1>Stop Searching. Start Watching.</h1>
+            <p>
+                Discover top-rated movies and TV shows curated to help you spend less time browsing and more time enjoying great entertainment.
+            </p>
+
+            <a href="recommendations.html" class="cta-button">Explore Recommendations</a>
+
+        </div>
+
+    </section>
+    <!-- FEATURED SECTION -->
+    <section class="featured">
+        <h2>Featured Picks</h2>
+        <p class="section-description">
+            Explore a selection of highly-rated movies and television series.
+        </p>
+        <div id="movie-grid" class="movie-grid">
+            <p class="loading">Loading recommendations...</p>
+        </div>
+
+    </section>
+    <!-- WHY MOVIESCOOP -->
+    <section class="about-site">
+        <h2>Why MovieScoop?</h2>
+        <div class="benefits">
+            <article class="benefit-card">
+                <h3>Curated Content</h3>
+                <p>
+                    Browse recommendations selected for quality, popularity, and viewer ratings.
+                </p>
+            </article>
+            <article class="benefit-card">
+                <h3>Save Favorites</h3>
+                <p>
+                    Store movies and TV shows in your personal watchlist using local storage.
+                </p>
+            </article>
+            <article class="benefit-card">
+                <h3>Filter Quickly</h3>
+                <p>
+                    Narrow results instantly by category and genre without reloading the page.
+                </p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<!-- MODAL -->
+<dialog id="movie-modal">
+    <div class="modal-content">
+        <h2 id="modal-title"></h2>
+        <p id="modal-meta"></p>
+        <p id="modal-description"></p>
+        <button type="button" id="close-modal" class="close-btn">
+            Close
+        </button>
+    </div>
+</dialog>
+
+<!-- FOOTER -->
+<footer>
+    <p>WDD231 Final Project</p>
+    <p>Ignatia Praise Mbachu | Lagos, Nigeria</p>
+    <p>&copy; <span id="current-year"></span> MovieScoop</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+    <p><a href="attributions.html">Resource Attributions</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="MovieScoop helps you discover highly-rated movies and TV shows with personalized recommendations, filtering tools, and a saved watchlist.">
+    <meta name="author" content="Ignatia Praise Mbachu">
+    <title>MovieScoop | Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Facebook / Open Graph Meta Tags -->
+    <meta property="og:title" content="MovieScoop | Homepage">
+        <meta property="og:description"
+        content="Discover highly-rated movies and TV shows with personalized recommendations, filtering tools, and a saved watchlist.">
+        <meta property="og:image"
+        content="https://praizarts.github.io/wdd231/final-project/images/logo.png">
+        <meta property="og:url"
+        content="https://praizarts.github.io/wdd231/final-project/index.html">
+        <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+<!-- HEADER -->
+   <header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="MovieScoop Logo">
+            <span>MovieScoop</span>
+        </a>
+
+        <button type="button" id="menu-btn" class="menu-btn" aria-label="Toggle Navigation">
+            ☰
+        </button>
+
+        <nav id="primary-nav">
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="recommendations.html">Recommendations</a></li>
+                <li><a href="watchlist.html">Watchlist</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>MovieScoop Recommendations</h1>
+    <p>Discover top movies and TV shows curated for you.</p>
+  </section>
+
+  <!-- FILTER CONTROLS -->
+  <section class="filters">
+
+    <label for="searchInput" class="visually-hidden">Search movies or shows</label>
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Search movies or shows..."
+    />
+
+    <label for="genreFilter">Genre</label>
+    <select id="genreFilter">
+      <option value="all">All Genres</option>
+      <option value="sci-fi">Sci-Fi</option>
+      <option value="action">Action</option>
+      <option value="drama">Drama</option>
+      <option value="thriller">Thriller</option>
+      <option value="fantasy">Fantasy</option>
+    </select>
+
+    <label for="typeFilter">Type</label>
+    <select id="typeFilter">
+      <option value="all">All Types</option>
+      <option value="movie">Movies</option>
+      <option value="tv">TV Shows</option>
+    </select>
+
+  </section>
+
+  <!-- MOVIE GRID -->
+  <main class="grid-container" id="movieGrid">
+
+    <!-- 1 -->
+    <div class="card" data-genre="sci-fi" data-type="movie">
+      <h3>Interstellar</h3>
+      <p>2014 • Sci-Fi</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="card" data-genre="action" data-type="movie">
+      <h3>Mad Max: Fury Road</h3>
+      <p>2015 • Action</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="card" data-genre="drama" data-type="movie">
+      <h3>The Shawshank Redemption</h3>
+      <p>1994 • Drama</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="card" data-genre="sci-fi" data-type="movie">
+      <h3>Dune</h3>
+      <p>2021 • Sci-Fi</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="card" data-genre="thriller" data-type="movie">
+      <h3>Gone Girl</h3>
+      <p>2014 • Thriller</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="card" data-genre="fantasy" data-type="movie">
+      <h3>Harry Potter</h3>
+      <p>Fantasy Saga</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="card" data-genre="action" data-type="movie">
+      <h3>John Wick</h3>
+      <p>Action Thriller</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="card" data-genre="sci-fi" data-type="movie">
+      <h3>The Matrix</h3>
+      <p>1999 • Sci-Fi</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="card" data-genre="drama" data-type="tv">
+      <h3>Breaking Bad</h3>
+      <p>TV Series • Drama</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="card" data-genre="fantasy" data-type="tv">
+      <h3>Game of Thrones</h3>
+      <p>TV Series • Fantasy</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="card" data-genre="thriller" data-type="tv">
+      <h3>Stranger Things</h3>
+      <p>TV Series • Thriller</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="card" data-genre="action" data-type="tv">
+      <h3>The Boys</h3>
+      <p>TV Series • Action</p>
+    </div>
+
+    <!-- 13 -->
+    <div class="card" data-genre="drama" data-type="movie">
+      <h3>Forrest Gump</h3>
+      <p>1994 • Drama</p>
+    </div>
+
+    <!-- 14 -->
+    <div class="card" data-genre="sci-fi" data-type="tv">
+      <h3>Black Mirror</h3>
+      <p>TV Series • Sci-Fi</p>
+    </div>
+
+    <!-- 15 -->
+    <div class="card" data-genre="action" data-type="movie">
+      <h3>Avengers: Endgame</h3>
+      <p>2019 • Action</p>
+    </div>
+
+  </main>
+
+  <!-- MODAL (for JS interaction later) -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalInfo"></p>
+      <button id="addToWatchlist">Add to Watchlist</button>
+    </div>
+  </div>
+
+<!-- FOOTER -->
+<footer>
+    <p>WDD231 Final Project</p>
+    <p>Ignatia Praise Mbachu | Lagos, Nigeria</p>
+    <p>&copy; <span id="current-year"></span> MovieScoop</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+    <p><a href="attributions.html">Resource Attributions</a></p>
+</footer>
+
+</body>
+</html>
