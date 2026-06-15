@@ -93,6 +93,11 @@
     footer p {
         margin-bottom: .75rem;
     }
+
+     .filters {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
 /* LARGE DESKTOP */

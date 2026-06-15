@@ -48,9 +48,9 @@
 
         <nav id="primary-nav">
             <ul class="navigation">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="recommendations.html">Recommendations</a></li>
-                <li><a href="watchlist.html">Watchlist</a></li>
+                <li><a href="watchlist.html" class="active">Watchlist</a></li>
             </ul>
         </nav>
     </div>
@@ -58,67 +58,11 @@
 
 <!-- MAIN CONTENT -->
 <main>
-<!-- HERO -->
-<section class="hero">
-        <div class="hero-content">
-            <h1>Stop Searching. Start Watching.</h1>
-            <p>
-                Discover top-rated movies and TV shows curated to help you spend less time browsing and more time enjoying great entertainment.
-            </p>
-
-            <a href="recommendations.html" class="cta-button">Explore Recommendations</a>
-
-        </div>
-
-    </section>
-    <!-- FEATURED SECTION -->
-    <section class="featured">
-        <h2>Featured Picks</h2>
-        <p class="section-description">
-            Explore a selection of highly-rated movies and television series.
-        </p>
-        <div id="movie-grid" class="movie-grid">
-            <p class="loading">Loading recommendations...</p>
-        </div>
-
-    </section>
-    <!-- WHY MOVIESCOOP -->
-    <section class="about-site">
-        <h2>Why MovieScoop?</h2>
-        <div class="benefits">
-            <article class="benefit-card">
-                <h3>Curated Content</h3>
-                <p>
-                    Browse recommendations selected for quality, popularity, and viewer ratings.
-                </p>
-            </article>
-            <article class="benefit-card">
-                <h3>Save Favorites</h3>
-                <p>
-                    Store movies and TV shows in your personal watchlist using local storage.
-                </p>
-            </article>
-            <article class="benefit-card">
-                <h3>Filter Quickly</h3>
-                <p>
-                    Narrow results instantly by category and genre without reloading the page.
-                </p>
-            </article>
-        </div>
-    </section>
+<section>
+    <h1>My Watchlist</h1>
+    <div id="watchlist-grid" class="movie-grid"></div>
+</section>
 </main>
-
-<!-- MODAL -->
-<dialog id="movie-modal">
-    <div class="modal-content">
-        <h2 id="modal-title"></h2>
-        <p id="modal-meta"></p>
-        <p id="modal-description"></p>
-        <button type="button" id="close-modal" class="close-btn">
-            Close
-        </button>
-    </div>
-</dialog>
 
 <!-- FOOTER -->
 <footer>
