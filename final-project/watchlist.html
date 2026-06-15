@@ -16,7 +16,7 @@
         <meta property="og:description"
         content="Discover highly-rated movies and TV shows with personalized recommendations, filtering tools, and a saved watchlist.">
         <meta property="og:image"
-        content="https://praizarts.github.io/wdd231/final-project/images/logo.png">
+        content="https://praizarts.github.io/wdd231/final-project/images/logo.webp">
         <meta property="og:url"
         content="https://praizarts.github.io/wdd231/final-project/index.html">
         <meta property="og:type" content="website">
@@ -32,13 +32,14 @@
 
     <!-- Scripts -->
     <script type="module" src="scripts/main.js"></script>
+<script type="module" src="scripts/storage.js"></script>
 </head>
 <body>
 <!-- HEADER -->
    <header>
     <div class="header-container">
         <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="MovieScoop Logo">
+            <img src="images/logo.webp" alt="MovieScoop Logo">
             <span>MovieScoop</span>
         </a>
 
@@ -58,12 +59,54 @@
 
 <!-- MAIN CONTENT -->
 <main>
-<section>
-    <h1>My Watchlist</h1>
-    <div id="watchlist-grid" class="movie-grid"></div>
-</section>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>My Watchlist</h1>
+            <p>
+                Your saved movies and TV shows are stored locally in your browser.
+            </p>
+        </div>
+    </section>
+
+    <section class="watchlist-section">
+        <h2>Saved Titles</h2>
+        <div id="watchlist-grid" class="movie-grid">
+            <p id="empty-watchlist" class="loading">
+                Your watchlist is currently empty.
+            </p>
+
+        </div>
+
+    </section>
+
 </main>
 
+<dialog id="movie-modal">
+    <div class="modal-content">
+
+        <h2 id="modal-title"></h2>
+        <p id="modal-meta"></p>
+        <p id="modal-description"></p>
+
+        <div class="modal-buttons">
+            <button
+                type="button"
+                id="remove-watchlist"
+                class="watchlist-btn">
+                Remove
+            </button>
+
+            <button
+                type="button"
+                id="close-modal"
+                class="close-btn">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+</dialog>
 <!-- FOOTER -->
 <footer>
     <p>&copy; <span id="current-year"></span> MovieScoop</p>

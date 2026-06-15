@@ -16,7 +16,7 @@
         <meta property="og:description"
         content="Discover highly-rated movies and TV shows with personalized recommendations, filtering tools, and a saved watchlist.">
         <meta property="og:image"
-        content="https://praizarts.github.io/wdd231/final-project/images/logo.png">
+        content="https://praizarts.github.io/wdd231/final-project/images/logo.webp">
         <meta property="og:url"
         content="https://praizarts.github.io/wdd231/final-project/index.html">
         <meta property="og:type" content="website">
@@ -38,7 +38,7 @@
    <header>
     <div class="header-container">
         <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="MovieScoop Logo">
+            <img src="images/logo.webp" alt="MovieScoop Logo">
             <span>MovieScoop</span>
         </a>
 
@@ -57,42 +57,78 @@
 </header>
 
   <main>
-<section>
-    <h1>Recommendations</h1>
 
-    <div class="filters">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Movie & TV Recommendations</h1>
+            <p>
+                Browse our complete collection of highly-rated movies and television shows.
+            </p>
+        </div>
+    </section>
 
-        <select id="genre-filter" aria-label="Genre filter">
-            <option value="all">All Genres</option>
-        </select>
+    <section class="filters">
 
-        <select id="category-filter" aria-label="Category filter">
-            <option value="all">Movies & TV Shows</option>
-            <option value="Movie">Movies</option>
-            <option value="TV Show">TV Shows</option>
-        </select>
+        <h2>Filter Recommendations</h2>
 
-    </div>
+        <div class="filter-controls">
 
-    <div id="movie-grid" class="movie-grid"></div>
+            <div class="filter-group">
+                <label for="category-filter">Category</label>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="Movie">Movies</option>
+                    <option value="TV Show">TV Shows</option>
+                </select>
+            </div>
 
-</section>
+            <div class="filter-group">
+                <label for="genre-filter">Genre</label>
+                <select id="genre-filter">
+                    <option value="all">All Genres</option>
+                    <option value="Action">Action</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Animation">Animation</option>
+                    <option value="Biography">Biography</option>
+                    <option value="Historical">Historical</option>
+                </select>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="recommendations-section">
+
+        <h2>All Recommendations</h2>
+
+        <div id="movie-grid" class="movie-grid">
+            <p class="loading">Loading recommendations...</p>
+        </div>
+
+    </section>
 
 </main>
 
 <dialog id="movie-modal">
     <div class="modal-content">
         <h2 id="modal-title"></h2>
+
         <p id="modal-meta"></p>
+
         <p id="modal-description"></p>
 
-        <button type="button" id="add-watchlist" class="details-btn">
-            Add to Watchlist
-        </button>
-
-        <button type="button" id="close-modal" class="close-btn">
-            Close
-        </button>
+        <div class="modal-buttons">
+            <button type="button" id="add-watchlist" class="watchlist-btn">
+                Add to Watchlist
+            </button>
+            <button type="button" id="close-modal" class="close-btn">
+                Close
+            </button>
+        </div>
     </div>
 </dialog>
 

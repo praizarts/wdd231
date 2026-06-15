@@ -164,6 +164,17 @@
     "image": "images/shogun.webp",
     "description": "Political intrigue and warfare unfold in feudal Japan after a foreign sailor arrives.",
     "featured": true
+  },
+  {
+    "id": 16,
+    "title": "24",
+    "category": "TV Show",
+    "genre": "Action",
+    "year": 2001,
+    "rating": 8.8,
+    "image": "images/24.webp",
+    "description": "Jack Bauer faces a series of terrorist attacks in Los Angeles.",
+    "featured": true
   }
 ]
 
