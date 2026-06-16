@@ -96,6 +96,13 @@ function openModal(movie) {
 
     selectedMovie = movie;
 
+    // INJECT THE MOVIE POSTER IMAGE DYNAMICALLY
+    const modalPoster = document.querySelector("#modal-poster");
+    if (modalPoster) {
+        modalPoster.src = movie.image;
+        modalPoster.alt = `${movie.title} poster`;
+    }
+
     document.querySelector("#modal-title").textContent =
         movie.title;
 

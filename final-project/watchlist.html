@@ -83,36 +83,40 @@
 
 <dialog id="movie-modal">
     <div class="modal-content">
-
-        <h2 id="modal-title"></h2>
-        <p id="modal-meta"></p>
-        <p id="modal-description"></p>
-
-        <div class="modal-buttons">
-            <button
-                type="button"
-                id="remove-watchlist"
-                class="watchlist-btn">
-                Remove
-            </button>
-
-            <button
-                type="button"
-                id="close-modal"
-                class="close-btn">
-                Close
-            </button>
-
+        <button type="button" id="close-modal" class="close-btn">&times;</button>
+        
+        <div class="modal-body-layout">
+            <div class="modal-poster-wrapper">
+                <img id="modal-poster" src="" alt="Movie Poster">
+            </div>
+            
+            <div class="modal-details">
+                <h2 id="modal-title"></h2>
+                <p id="modal-meta"></p>
+                <p id="modal-description"></p>
+                <div class="modal-buttons">
+                    <button type="button" id="remove-watchlist" class="watchlist-btn">
+                        Remove from Watchlist
+                    </button>
+                </div>
+            </div>
         </div>
-
     </div>
 </dialog>
+
 <!-- FOOTER -->
 <footer>
-    <p>&copy; <span id="current-year"></span> MovieScoop</p>
-    <p>WDD231 Final Project | Ignatia Praise Mbachu | Lagos, Nigeria</p>
-        <p>Last Modification: <span id="last-modified"></span></p>
-    <p><a href="attributions.html">Resource Attributions</a></p>
+    <div class="footer-container">
+        <div class="footer-info">
+            <p class="copyright">&copy; 2026 <span>MovieScoop</span>. All rights reserved.</p>
+            <p class="course-details">WDD231 Final Project &bull; Ignatia Praise Mbachu &bull; Lagos, Nigeria</p>
+        </div>
+        
+        <div class="footer-meta">
+            <p class="timestamp">Last Modified: <span id="last-modified">06/15/2026 14:57:35</span></p>
+            <a href="attributions.html" class="attribution-btn">Resource Attributions</a>
+        </div>
+    </div>
 </footer>
 
 </body>
