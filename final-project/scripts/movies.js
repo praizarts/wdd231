@@ -11,7 +11,9 @@ export async function loadMovies() {
 
         movieData = await response.json();
 
-        const movieGrid = document.querySelector("#movie-grid");
+        // FIX: Look for whichever container grid ID exists on the active page view
+        const movieGrid = document.querySelector("#movie-grid") || 
+                          document.querySelector("#recommendations-grid");
 
         if (!movieGrid) return;
 
@@ -23,12 +25,14 @@ export async function loadMovies() {
             ? movieData.filter(movie => movie.featured)
             : movieData;
 
-        displayMovies(moviesToDisplay);
+        // FIX: Pass the found grid wrapper explicitly into the layout compiler
+        displayMovies(moviesToDisplay, movieGrid);
 
     } catch (error) {
         console.error(error);
 
-        const movieGrid = document.querySelector("#movie-grid");
+        const movieGrid = document.querySelector("#movie-grid") || 
+                          document.querySelector("#recommendations-grid");
 
         if (movieGrid) {
             movieGrid.innerHTML = `
@@ -40,9 +44,8 @@ export async function loadMovies() {
     }
 }
 
-function displayMovies(movies) {
-    const movieGrid = document.querySelector("#movie-grid");
 
+function displayMovies(movies, movieGrid) {
     movieGrid.innerHTML = "";
 
     movies.forEach(movie => {

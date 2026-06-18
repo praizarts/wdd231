@@ -107,19 +107,26 @@
     </section>
 
 </main>
-
 <dialog id="movie-modal">
     <div class="modal-content">
-        <h2 id="modal-title"></h2>
-        <p id="modal-meta"></p>
-        <p id="modal-description"></p>
-        <div class="modal-buttons">
-            <button type="button" id="add-watchlist" class="watchlist-btn">
-                Add to Watchlist
-            </button>
-            <button type="button" id="close-modal" class="close-btn">
-                Close
-            </button>
+        <button type="button" id="close-modal" class="close-btn">&times;</button>
+        
+        <div class="modal-body-layout">
+            <div class="modal-poster-wrapper">
+                <img id="modal-poster" src="" alt="Movie Poster">
+            </div>
+            
+            <div class="modal-text-content">
+                <h2 id="modal-title"></h2>
+                <p id="modal-meta"></p>
+                <p id="modal-description"></p>
+                
+                <div class="modal-buttons">
+                    <button type="button" id="add-watchlist" class="watchlist-btn">
+                        Add to Watchlist
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </dialog>

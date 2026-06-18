@@ -1,6 +1,6 @@
 import { getMovies } from "./dataService.js";
 
-const movieGrid = document.querySelector("#movie-grid");
+const movieGrid = document.querySelector("#movie-grid") || document.querySelector("#recommendations-grid");
 const genreFilter = document.querySelector("#genre-filter");
 const categoryFilter = document.querySelector("#category-filter");
 
@@ -24,8 +24,10 @@ menuBtn?.addEventListener("click", () => {
 });
 
 // Footer
-document.querySelector("#current-year").textContent =
-    new Date().getFullYear();
+const currentYearEl = document.querySelector("#current-year");
+if (currentYearEl) {
+    currentYearEl.textContent = new Date().getFullYear();
+}
 
 async function initialize() {
     movies = await getMovies();
@@ -35,6 +37,7 @@ async function initialize() {
 }
 
 function populateGenres(data) {
+    if (!genreFilter) return;
     const genres = [...new Set(data.map(movie => movie.genre))];
 
     genres.forEach(genre => {
@@ -46,13 +49,11 @@ function populateGenres(data) {
 }
 
 function displayMovies(data) {
-
+    if (!movieGrid) return;
     movieGrid.innerHTML = "";
 
     data.forEach(movie => {
-
         const card = document.createElement("article");
-
         card.classList.add("movie-card");
 
         card.innerHTML = `
@@ -83,46 +84,46 @@ function displayMovies(data) {
 }
 
 function addModalEvents() {
-
     document.querySelectorAll(".details-btn")
         .forEach(button => {
-
             button.addEventListener("click", () => {
-
                 const id = Number(button.dataset.id);
 
-                selectedMovie =
-                    movies.find(movie => movie.id === id);
+                selectedMovie = movies.find(movie => movie.id === id);
+                if (!selectedMovie) return;
 
-                modalTitle.textContent =
-                    selectedMovie.title;
+              
+                const modalPoster = document.querySelector("#modal-poster");
+                if (modalPoster) {
+                    modalPoster.src = selectedMovie.image;
+                    modalPoster.alt = `${selectedMovie.title} poster`;
+                }
+
+                modalTitle.textContent = selectedMovie.title;
 
                 modalMeta.textContent =
                     `${selectedMovie.category} • ${selectedMovie.genre} • ${selectedMovie.year} • ⭐ ${selectedMovie.rating}`;
 
-                modalDescription.textContent =
-                    selectedMovie.description;
+                modalDescription.textContent = selectedMovie.description;
 
                 modal.showModal();
             });
-
         });
 }
 
-genreFilter.addEventListener("change", filterMovies);
-categoryFilter.addEventListener("change", filterMovies);
+if (genreFilter) genreFilter.addEventListener("change", filterMovies);
+if (categoryFilter) categoryFilter.addEventListener("change", filterMovies);
 
 function filterMovies() {
-
     let filtered = [...movies];
 
-    if (genreFilter.value !== "all") {
+    if (genreFilter && genreFilter.value !== "all") {
         filtered = filtered.filter(
             movie => movie.genre === genreFilter.value
         );
     }
 
-    if (categoryFilter.value !== "all") {
+    if (categoryFilter && categoryFilter.value !== "all") {
         filtered = filtered.filter(
             movie => movie.category === categoryFilter.value
         );
@@ -131,33 +132,32 @@ function filterMovies() {
     displayMovies(filtered);
 }
 
-addWatchlistBtn.addEventListener("click", () => {
+if (addWatchlistBtn) {
+    addWatchlistBtn.addEventListener("click", () => {
+        if (!selectedMovie) return;
 
-    if (!selectedMovie) return;
+        const watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+        const exists = watchlist.some(movie => movie.id === selectedMovie.id);
 
-    const watchlist =
-        JSON.parse(localStorage.getItem("watchlist"))
-        || [];
+        if (!exists) {
+            watchlist.push(selectedMovie);
+            localStorage.setItem("watchlist", JSON.stringify(watchlist));
+            alert(`${selectedMovie.title} added to watchlist!`);
+        } else {
+            alert(`${selectedMovie.title} is already in your watchlist.`);
+        }
 
-    const exists = watchlist.some(
-        movie => movie.id === selectedMovie.id
-    );
+        modal.close();
+    });
+}
 
-    if (!exists) {
+if (closeModalBtn) {
+    closeModalBtn.addEventListener("click", () => {
+        modal.close();
+    });
+}
 
-        watchlist.push(selectedMovie);
 
-        localStorage.setItem(
-            "watchlist",
-            JSON.stringify(watchlist)
-        );
-    }
-
-    modal.close();
+document.addEventListener("DOMContentLoaded", () => {
+    initialize();
 });
-
-closeModalBtn.addEventListener("click", () => {
-    modal.close();
-});
-
-initialize();
